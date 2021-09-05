@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Nature & Wildlife</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/UFP.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    img {margin-bottom: -7px}
+.ufp-row-padding img {margin-bottom: 12px}
+
+</style>
+
+<body class="ufp-light-grey">
+
+    <!-- Sidebar/menu -->
+    <nav class="ufp-sidebar ufp-bar-block ufp-black ufp-animate-right ufp-top ufp-text-light-grey ufp-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+        <a href="javascript:void()" onclick="ufp_close()" class="ufp-bar-item ufp-button ufp-center ufp-padding-32">CLOSE</a>
+        <a href="Photos.html" onclick="ufp_close()" class="ufp-bar-item ufp-button ufp-center ufp-padding-16">HOME</a>
+        <a href="#images" onclick="ufp_close()" class="ufp-bar-item ufp-button ufp-center ufp-padding-16">IMAGES</a>
+        <a href="#join" onclick="ufp_close()" class="ufp-bar-item ufp-button ufp-center ufp-padding-16">JOIN US</a>
+        <a href="#contact" onclick="ufp_close()" class="ufp-bar-item ufp-button ufp-center ufp-padding-16">CONTACT</a>
+        <a class="ufp-padding-16 ufp-bar-item ufp-button ufp-center" onclick="myFunction()">Toggle Grid Padding</button></a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="ufp-container ufp-top ufp-white ufp-xlarge ufp-padding-16">
+        <span class="ufp-left ufp-padding">Nature & Wildlife</span>
+        <a href="javascript:void(0)" class="ufp-right ufp-button ufp-white" onclick="ufp_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="ufp-overlay ufp-animate-opacity" onclick="ufp_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    
+
+    <!---Image Gallery --->
+    <div class="ufp-row" id="myGrid" style="margin-bottom:128px">
+       <div class="ufp-third">
+            <img src="gallery/nature/a1.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+            <img src="gallery/nature/a2.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+            <img src="gallery/nature/a3.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+             <img src="gallery/nature/a12.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+      </div>
+
+      <div class="ufp-third">
+          <img src="gallery/nature/a4.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+          <img src="gallery/nature/a5.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+          <img src="gallery/nature/a6.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+          <img src="gallery/nature/a11.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+      </div>
+
+      <div class="ufp-third">
+         <img src="gallery/nature/a7.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+         <img src="gallery/nature/a8.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+         <img src="gallery/nature/a9.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+         <img src="gallery/nature/a10.JPG" style="width:100%" onclick="onClick(this)" alt="Clicked By: ">
+      </div>
+    </div>
+
+
+            <!-- Pagination -->
+            <div class="ufp-center ufp-padding-32">
+                <div class="ufp-bar">
+                    <a href="Nature2.html" class="ufp-bar-item ufp-button ufp-hover-black">«</a>
+                    <a href="#" class="ufp-bar-item ufp-black ufp-button">1</a>
+                    <a href="Nature1.html" class="ufp-bar-item ufp-button ufp-hover-black">2</a>
+                    <a href="Nature2.html" class="ufp-bar-item ufp-button ufp-hover-black">3</a>
+                    <a href="Nature.html" class="ufp-bar-item ufp-button ufp-hover-black">»</a>
+                </div>
+            </div>
+
+            <!-- Modal for full size images on click-->
+            <div id="modal01" class="ufp-modal ufp-black" style="padding-top:0" onclick="this.style.display='none'">
+                <span class="ufp-button ufp-black ufp-xlarge ufp-display-topright">×</span>
+                <div class="ufp-modal-content ufp-animate-zoom ufp-center ufp-transparent ufp-padding-64">
+                    <img id="img01" class="ufp-image">
+                    <p id="caption"></p>
+                </div>
+            </div>
+
+            <!-- About section -->
+            <div class="ufp-container ufp-dark-grey ufp-center ufp-text-light-grey ufp-padding-32" id="join">
+                <h4><b>Join Us</b></h4>
+                <img src="assets/img/insta.jpg" alt="Me" class="ufp-image ufp-padding-32" width="600" height="650">
+                <div class="ufp-content ufp-justify" style="max-width:600px">
+                    <h4>JOIN US AND BE A PART OF OUR COMMUNITY</h4>
+                    <p>Send us your best clicks on Instagram , tag our page with your image and get displayed here...
+                    </p>
+                    <p>mail: </p>
+                    <p>ph no.: </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact section -->
+        <div class="ufp-container ufp-light-grey ufp-padding-32 ufp-padding-large" id="contact">
+            <div class="ufp-content" style="max-width:600px">
+                <h4 class="ufp-center"><b>Contact Us</b></h4>
+                <p>For further data you can contact us: </p>
+                <form action="mailto:uniquefeaturepage@gmail.com" method="post" enctype="text/plain">
+                    <div class="ufp-section">
+                        <label>Name</label>
+                        <input class="ufp-input ufp-border" type="text" name="Name" required>
+                    </div>
+                    <div class="ufp-section">
+                        <label>Email</label>
+                        <input class="ufp-input ufp-border" type="text" name="Email" required>
+                    </div>
+                    <div class="ufp-section">
+                        <label>Message</label>
+                        <input class="ufp-input ufp-border" type="text" name="Message" required>
+                    </div>
+                    <button type="submit" class="ufp-button ufp-block ufp-black ufp-margin-bottom">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="ufp-container ufp-padding-32 ufp-grey">
+            <div class="ufp-row-padding">
+                <div class="ufp-third">
+                    <h3>INFO</h3>
+                    <p>Follow Our Instagram Page and be a member of our community.</p>
+                </div>
+
+                <div class="ufp-third">
+                    <h3>BLOG POSTS</h3>
+                    <ul class="ufp-ul">
+                        <li class="ufp-padding-16 ufp-hover-black">
+                            <img src="/ufpimages/workshop.jpg" class="ufp-left ufp-margin-right" style="width:50px">
+                            <span class="ufp-large">Why i follow Productivity</span><br>
+                            <span>Diptesh Sannigrahi</span>
+                        </li>
+                        <li class="ufp-padding-16 ufp-hover-black">
+                            <img src="/ufpimages/gondol.jpg" class="ufp-left ufp-margin-right" style="width:50px">
+                            <span class="ufp-large">Books vs Ebooks</span><br>
+                            <span>Diptesh Sannigrahi</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ufp-third">
+                    <h3>POPULAR TAGS</h3>
+                    <p>
+                        <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Travel<i></i></a></span> <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Kolkata<i></i></a></span> <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Forest<i></i></a></span>                        <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Monkey<i></i></a></span> <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Delhi<i></i></a></span> <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Cricket<i></i></a></span>                        <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Sunset<i></i></a></span> <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">River<i></i></a></span> <span><a href=" "class="ufp-button ufp-black ufp-margin-bottom">Tree<i></i></a></span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="ufp-black ufp-center ufp-padding-24">Powered by <a href="About.html" target="_blank" class="ufp-hover-opacity">UFP Team</a>
+        </div>
+
+        </div>
+        <!-- End page content -->
+        </div>
+
+        <script>
+            // Script to open and close sidebar
+
+            function myFunction() {
+                var x = document.getElementById("myGrid");
+                if (x.className === "ufp-row") {
+                    x.className = "ufp-row-padding";
+                } else { 
+                   x.className = x.className.replace("ufp-row-padding", "ufp-row");
+                }
+            }
+            function ufp_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function ufp_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
+            }
+        </script>
+
+</body>
+
+</html>
